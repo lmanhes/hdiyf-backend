@@ -8,6 +8,7 @@ class News(BaseModel):
     title: str
     text: str
     label: int
+    subject: str
 
     class Config:
         orm_mode = True

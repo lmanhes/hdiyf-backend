@@ -13,3 +13,4 @@ class News(Base):
     text = Column(Text)
     subject = Column(String)
     label = Column(Integer)
+    subject = Column(String)
