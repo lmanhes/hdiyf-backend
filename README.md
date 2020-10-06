@@ -2,7 +2,7 @@
 
 ## Features
 
-- (wip) : get access to a random news
+- get access to a random news
 - (wip) : predict if a news is real or fake
 
 ## Installation
