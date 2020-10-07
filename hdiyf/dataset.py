@@ -10,7 +10,7 @@ class TrainingDataset(Dataset):
 
     def __init__(self, dataset_file, vocabulary, core_model, config):
         self.dataset = pd.read_csv(dataset_file)
-        self.dataset = self.dataset.sample(frac=1).iloc[:2000]
+        self.dataset = self.dataset.sample(frac=1).iloc[:5000]
         self.vocab = vocabulary
         self.core_model = core_model
         self.config = config
@@ -20,9 +20,8 @@ class TrainingDataset(Dataset):
         self.labels = []
         for i, doc in enumerate(self.dataset.text):
             if type(doc) == str:
-                self.text_docs.append(doc.split())
+                self.text_docs.append(self.preprocessing(self.core_model(doc)))
                 self.labels.append(self.dataset.iloc[i].label)
-        #self.text_docs = list(self.core_model.pipe(self.dataset.text))
         #self.maxlen_doc = calculate_maxlen(self.text_docs)
         self.maxlen_doc = 300
         print("maxlen doc : ", self.maxlen_doc)

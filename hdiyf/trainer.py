@@ -93,7 +93,6 @@ class Trainer(object):
 
             run_epoch('train')
             test_loss = run_epoch('test')
-            #scheduler.step(test_loss)
 
             # supports early stopping based on the test loss
             if (test_loss - best_loss) < -self.training_config['min_delta']:
