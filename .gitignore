@@ -135,3 +135,5 @@ data
 *.sqlite
 
 models_files
+
+hdiyf_database.dump
