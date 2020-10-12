@@ -134,8 +134,6 @@ data
 
 *.sqlite
 
-models_files/
-w2v_model.bin
-w2v_vocabulary.pkl
-
 hdiyf_database.dump
+
+*.DS_Store
