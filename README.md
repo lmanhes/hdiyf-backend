@@ -14,7 +14,24 @@ pip install -r requirements.txt
 
 ## How to use
 
-```bash
+### Locally
+
+```
 # Run the app
 $ uvicorn app.main:app
-``
+
+# Go to localhost:8000/api/v1/docs
+```
+
+### Cloud
+
+### Setup
+
+```
+# Upload new database
+$ heroku pg:psql DATABASE_URL --app hdiyf-backend < hdiyf_database.dump
+```
+
+#### Access to doc online
+
+https://hdiyf-backend.herokuapp.com/api/docs#/
